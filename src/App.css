@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: url('https://image.shutterstock.com/shutterstock/photos/1902390253/display_1500/stock-photo-cryptocurrency-bitcoin-the-future-coin-1902390253.jpg');
+  background-size: 1000px 500px;
 }
 
 .App-logo {

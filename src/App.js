@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+// import { Test } from './cmps/test.jsx'
+import { ContactApp } from './pages/ContactApp'
+import { BitcoinChart } from './pages/BitcoinChart'
+import { BitcoinHeader } from './cmps/BitcoinHeader'
+import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { ContactDetailsPage } from './pages/ContactDetailsPage'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+            <BitcoinHeader/>
+        <Switch>
+            <Route component={ContactDetailsPage} path ='/contact/:id'/>
+            <Route  exact component={BitcoinChart} path='/chart' />
+            <Route   component={ContactApp} path='/' />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

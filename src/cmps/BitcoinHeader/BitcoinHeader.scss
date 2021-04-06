@@ -1,0 +1,73 @@
+.bitcoinHeader {
+
+}
+.header-container{
+    max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-img{
+    cursor: pointer;
+    width: 50px;
+    border-radius: 100px;
+}
+.img-header-container{
+    color: rgb(93, 189, 106);
+    padding: 15px 0px 15px 15px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.logo-name{
+    padding-left:0px;
+}
+.header-nav{
+   
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.home-nav{
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    padding: 15px;
+    color: rgb(93, 189, 106);
+    font-size: large;
+}
+.contacts-nav{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px;
+    color: rgb(93, 189, 106);
+    font-size: large;
+}
+.chart-nav{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px;
+    color: rgb(93, 189, 106);
+    font-size: large;
+}
+.edit-nav{
+    cursor: pointer;
+    padding: 15px;
+    color: rgb(93, 189, 106);
+    font-size: large;
+}
+
+ul{
+    text-decoration: none;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+    margin-inline-start: 10px;
+  }
+
+  .active-nav {
+    font-weight: bold;
+    color: rgb(164, 180, 223);
+  }
