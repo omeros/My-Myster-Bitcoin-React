@@ -1,10 +1,16 @@
-.bitcoinHeader {
+.header-container{
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
-.header-container{
-    max-width: 1000px;
-  display: flex;
-  justify-content: space-between;
+.navbar-container{
+    width: 1350px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-end:20px ;
+
 }
 .header-img{
     cursor: pointer;
@@ -13,12 +19,13 @@
 }
 .img-header-container{
     color: rgb(93, 189, 106);
-    padding: 15px 0px 15px 15px;
+    padding: 15px 06px 15px 0px;
     display: flex;
    justify-content: center;
    align-items: center;
 }
 .logo-name{
+    font-size:  x-large;
     padding-left:0px;
 }
 .header-nav{
@@ -35,27 +42,27 @@
     cursor: pointer;
     padding: 15px;
     color: rgb(93, 189, 106);
-    font-size: large;
+    font-size: x-large;
 }
 .contacts-nav{
     text-decoration: none;
     cursor: pointer;
     padding: 15px;
     color: rgb(93, 189, 106);
-    font-size: large;
+    font-size:  x-large;
 }
 .chart-nav{
     text-decoration: none;
     cursor: pointer;
     padding: 15px;
     color: rgb(93, 189, 106);
-    font-size: large;
+    font-size:  x-large;
 }
 .edit-nav{
     cursor: pointer;
     padding: 15px;
     color: rgb(93, 189, 106);
-    font-size: large;
+    font-size:  x-large;
 }
 
 ul{

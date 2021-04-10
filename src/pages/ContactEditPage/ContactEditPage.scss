@@ -1,0 +1,72 @@
+
+.contact-edit-page{
+    box-shadow: 5px 5px 5px 10px  #888888be;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: inset;
+    position: relative;
+    left : 600px;
+    color: rgb(160, 15, 15);
+    height: 640px;
+    background-color: rgb(153, 201, 129);
+    width:400px;
+    border-radius: 10px;
+}
+.contact-edit{
+    display: flex;
+    flex-direction: column;
+    .input{
+        padding: 6px 12px;
+        width: 300px;
+    }
+    label {
+        margin-bottom: 8px;
+      }
+}
+.test123{
+    // position:relative;
+    // height : 200px;
+    // width:  100px;
+
+
+}
+.edit-page-name{
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: 300px;
+    height: 40px;
+    font-size: large;
+}
+.edit-page-phone{
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: 300px;
+    height: 40px;
+    font-size: large;
+}
+.edit-page-email{
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: 300px;
+    height: 40px;
+    font-size: large;
+}
+.save-edit-page{
+    position: relative;
+    left: 50px;
+    border-radius: 6px;
+    height: 40px;
+    width: 200px;
+    font-size: x-large;
+}
+label{
+    padding-right: 15px;
+}
+
+
+
+
+
+
+

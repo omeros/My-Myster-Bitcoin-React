@@ -1,12 +1,22 @@
 .contact-app {
     // background-image: url('https://image.shutterstock.com/shutterstock/photos/1673190871/display_1500/stock-photo-bitcoin-cryptocurrency-gold-coin-trading-on-the-cryptocurrency-exchange-trends-in-bitcoin-1673190871.jpg');
     // background-image: url('https://image.shutterstock.com/image-photo/golden-coins-bitcoin-symbol-on-600w-1698227716.jpg');
-    background-image: url('https://image.shutterstock.com/shutterstock/photos/1902390253/display_1500/stock-photo-cryptocurrency-bitcoin-the-future-coin-1902390253.jpg');
-    background-size: 1000px 500px;
+    // background-image: url('https://image.shutterstock.com/shutterstock/photos/1902390253/display_1500/stock-photo-cryptocurrency-bitcoin-the-future-coin-1902390253.jpg');
+    // background-size: 100vh 100vh;
+    // position: relative;
+    // display: flex;
+    // justify-content: center;
+ 
+    // background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+.list-section{
+    // background-image: url('https://image.shutterstock.com/shutterstock/photos/1673190871/display_1500/stock-photo-bitcoin-cryptocurrency-gold-coin-trading-on-the-cryptocurrency-exchange-trends-in-bitcoin-1673190871.jpg');
+
+    background-color: rgb(255, 255, 255);
     position: relative;
     display: flex;
-    left: 00px;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-    height: 700px;
+    justify-content: center;
+    align-items: flex-start;
+    top:  0px; 
 }

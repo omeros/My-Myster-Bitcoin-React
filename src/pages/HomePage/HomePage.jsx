@@ -1,6 +1,9 @@
 
 import { Component } from 'react'
-import userService from '../../services/userService';
+import UserService from '../../services/userService.js'
+import BitcoinService from '../../services/BitcoinService.js'
+import { TransferFund } from '../../cmps/TransferFund'
+import { MovesList } from '../../cmps/MovesList'
 
 
 import './HomePage.scss'
@@ -8,40 +11,67 @@ import './HomePage.scss'
 export class HomePage extends Component {
 
     state = {
-        myUser :  this.props.user,
-        btc : this.props.btc,
-        myImg : ""
+        myUser: UserService.getUser(),
+        logedInUser: UserService.getLogedInUser(),
+        btc: this.props.btc,
+        myImg: "",
+        show: false
+    }
+    async loadCoins() {
+        const btc = await BitcoinService.getRate()
+        console.log('load btc  in home app', btc)
+        this.setState({ btc })
     }
 
     componentDidMount() {
-      //this.loadImg()
-      }
-    //   loadImg(){
-    //     this.setState((state) => {
-    //         var myImg =  userService.queryNewImage()
-    //         console.log('load Images',myImg)
-    //         return {myImg: myImg}
-    //         });
-    // }
-                                   // ******************{this.state.btc}  
+        this.loadCoins()
+        //this.loadImg()
+    }
+    sortMoves() {
+        if (this.state.logedInUser[0].moves) {
+            var myMoves = this.state.logedInUser[0].moves
+            myMoves.sort((a, b) => {
+                return b.at - a.at
+            })
+            return myMoves
+        } else {
+            return null
+        }
+    }
+    choosUserToTransfer(){
+        //this.state.show=true
+        this.setState({ show:!this.state.show })
+      //  console.log("tranfer bitttttttttttt",  this.state.show)
+   }
+   
     render() {
         return (
             <div className="home-page">
                 <div className="home-container">
-                    <div> Hello {this.state.myUser[0].name} ! </div>
+                    <div> Hello  <span className="home-name">{this.state.myUser[0].fullname} </span> ! </div>
+
                     <div> You Have  {this.state.myUser[0].coins} coins</div>
-                   {/* equls to  {this.state.btc&& <div>{ */}
-                   equls to{this.state.btc&&<div>{
+                    <div> {this.state.btc} BTC                     </div>
+                    {/* equls to  {this.state.btc&& <div>{ */}
+                    {/* equls to{this.state.btc&&<div>{
                     (parseInt)((1/(this.state.btc)))*(this.state.myUser[0].coins)
-                    }$ </div>}
+                    }$ </div>} */}
                     <div>
-                        {/* <img className="myImage" src='https://thispersondoesnotexist.com/image' alt="" /> */}
                         <img className="home-image" src={`${this.state.myUser[0].image}`} alt="" />
-                        {/* <img className="myImage" src={`${this.myImg}`} alt="" /> */}
                     </div>
-                    {/* <div>
-                        <img className="coinImage" src={`${this.state.myUser[0].coinImg}`} alt="" />
-                    </div> */}
+
+                 
+                    {/* <button onClick={() => this.choosUserToTransfer()}>choos User</button>
+                    {this.state.show && <TransferFund />} */}
+
+
+                    <div className="movelist-container-home">
+                    {this.state.logedInUser[0].moves&&<MovesList className="movelist-container" moves={this.sortMoves()} />}
+                    </div>
+
+                   
+
+
                 </div>
             </div>
         )
