@@ -136,8 +136,8 @@ export class _ContactEditPage extends Component {
                         {this.props.selectedcontact && <img className="contact-details-image" src={`${this.props.selectedcontact.image}`} alt="" />}
                         <form className='contact-edit' onSubmit={this.onSaveContact}>
 
-                            <label htmlFor="name-input">Name</label>
-                         <input ref={this.inputRef} required type="text" className="edit-page-name" id="name-input" value={this.state.contact.fullname} onChange={this.handleChange} name="name" /> 
+                        {this.state.contact.fullname&&<label htmlFor="name-input">Name</label>}
+                            {this.state.contact.fullname&&<input ref={this.inputRef} required type="text" className="edit-page-name" id="name-input" value={this.state.contact.fullname} onChange={this.handleChange} name="fullname" /> }
                             <label htmlFor="phone-input">Phone</label>
                             <input required type="text" id="phone-input" className="edit-page-phone" value={this.state.contact.phone} onChange={this.handleChange} name="phone" />
                             <label htmlFor="email-input">Email</label>

@@ -88,7 +88,7 @@ function login(user) {
       var newUser = getEmptyUser()
       newUser.fullname = user.fullname
       gUser[0] = newUser
-      storageService.store(STORAGE_KEY, newUser)
+      storageService.store(STORAGE_KEY,gUser)
       return newUser
 }
 
