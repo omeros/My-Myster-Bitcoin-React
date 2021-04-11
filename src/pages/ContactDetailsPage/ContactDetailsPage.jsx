@@ -105,7 +105,7 @@ export class _ContactDetailsPage extends Component {
                               <NavLink exact to="/contacts" activeClassName="active-nav" className="details-link">Back</NavLink>
                               {this.props.selectedcontact&&<NavLink  to={'/edit/'+ this.props.selectedcontact._id} className="details-link">Edit </NavLink>}
                             </div>
-                            <button  onClick={() => this.choosUserToTransfer()}>Transfer To User</button>
+                            <button className="transfer-btn" onClick={() => this.choosUserToTransfer()}>Transfer To User</button>
                             {this.state.show&&<TransferFund closeModal={this.closeModal} moneyTo={this.props.selectedcontact.fullname}/>}
                   </div>
               </div>

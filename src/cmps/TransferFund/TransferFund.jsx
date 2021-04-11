@@ -40,11 +40,12 @@ export class TransferFund extends Component {
         return (
             <div className="transfer-founds-container">
          
-                <form className='contact-login' >
-                    <label htmlFor="amount-input">insert Amount</label>
-                    <input ref={this.inputRef} required type="number" id="amount-input" className="input-login" value={this.state.amount.x}   onChange={this.handleChange} name="x" />
+                <form className='amount-form' >
+                    
+                    <label htmlFor="amount-input" className="amount-input-label">insert Amount</label>
+                    <input ref={this.inputRef} required type="number" id="amount-input" className="input-amount  " value={this.state.amount.x}   onChange={this.handleChange} name="x" />
                 </form>
-                <button  onClick={() => this.transferBitCoins()}>transfer</button>          
+                <button className="transfer-btn" onClick={() => this.transferBitCoins()}>transfer</button>          
 
                 
             </div>

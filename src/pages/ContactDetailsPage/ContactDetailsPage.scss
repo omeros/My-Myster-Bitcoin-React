@@ -43,10 +43,16 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
- 
-
-    // position: relative;
+  // position: relative;
     // top: 60px;
-
-
+}
+.transfer-btn{
+        text-decoration: none;
+        list-style: none;
+        cursor: pointer;
+        padding: 15px;
+        color: rgb(7, 7, 7);
+        font-size: large;
+        border-radius: 10px;
+        background-color: rgb(173, 118, 118);
 }
