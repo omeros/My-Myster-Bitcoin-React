@@ -17,7 +17,7 @@ export class _ContactEditPage extends Component {
     }
 
         mytest10 = (fileIwant) => {
-           // console.log('file in father edit',fileIwant);
+            console.log('file in father edit',fileIwant);
             //  this.setState( {{image: fileIwant}} )
             //  this.setState( this.state.contact.image, fileIwant )
              this.setState( {selectedFile:fileIwant} )

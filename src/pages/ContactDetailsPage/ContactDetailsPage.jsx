@@ -25,12 +25,7 @@ export class _ContactDetailsPage extends Component {
     componentDidMount() {
         //this.loadContact()
         this.props.getContactById(this.props.match.params.id)
-        // this.setState((state) => {
-        //   )
-        //   console.log('on ContactDetailsPage load',this.state.selectedUser)
-     //   console.log('this.props.match.params.id,  in details page : ',this.state.logedInUser)
-     //   console.log('props in details page : ',this.props)
-        this.loadCoins()
+            this.loadCoins()
         //  console.log('id of the contact  on details :',this.props.match.params.id)
         //     return {: }
         //     });

@@ -33,12 +33,7 @@ export class _ContactApp extends Component {
     //  console.log('load coins in app',btc)
     this.setState({ btc })
   }
-  //   async loadCoins(){
-  //     this.setState((state) => {
-  //     const myBTC =  await BitcoinService.query()
-  //     return { btc : myBTC}
-  //   })
-  // }
+
 
   
   onSelectContact = (contactId) => {
@@ -57,12 +52,10 @@ export class _ContactApp extends Component {
     const { contacts, user, btc } = this.state
     return (
       <div className="contact-app">
-        {/* {user&&<HomePage key={user.id}  user={user}  btc={btc} />} */}
         <section className="list-section">
           {contacts && <ContactList contacts={contacts} onSelectContact={this.onSelectContact} />}
         </section>
         <div className="">
-          {/* {&&<ContactDetailsPage  selectedUser={selectedUser} />}  */}
         </div>
 
       </div>

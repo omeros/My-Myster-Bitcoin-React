@@ -13,7 +13,7 @@ export class HomePage extends Component {
     state = {
         myUser: UserService.getUser(),
         logedInUser: UserService.getLogedInUser(),
-        btc: this.props.btc,
+        btc:   '', //this.props.btc,
         myImg: "",
         show: false
     }
@@ -50,7 +50,7 @@ export class HomePage extends Component {
                 <div className="home-container">
                     <div> Hello  <span className="home-name">{this.state.myUser[0].fullname} </span> ! </div>
 
-                    <div> You Have  {this.state.myUser[0].coins} coins</div>
+                    <div> You Have <span className="num-coins"> {this.state.myUser[0].coins}</span> coins </div>
                     <div> {this.state.btc} BTC                     </div>
                     {/* equls to  {this.state.btc&& <div>{ */}
                     {/* equls to{this.state.btc&&<div>{

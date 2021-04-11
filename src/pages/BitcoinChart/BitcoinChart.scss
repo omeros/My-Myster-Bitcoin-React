@@ -1,6 +1,6 @@
 .bitcoin-chart {
    color: rgb(196, 64, 31);
-   height: 100vh;
+   height: 110vh;
    position: relative;
 }
 
@@ -12,13 +12,16 @@
    position: absolute;
    top : 100px;
    right: 100px;
-   width: 400px;
-   height: 350px;
+   width: 1400px;
+   height: 550px;
 }
 .bar{
    position: absolute;
-   top :100px;
-   left: 50px;
-   width: 300px;
-   height: 350px;
+   right: 120px;
+   bottom: -150px;
+   // display: flex;
+   // align-items: center;
+   // justify-content: flex-start;
+   width: 600px;
+   height: 650px;
 }

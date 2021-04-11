@@ -31,7 +31,7 @@ export class LoginPage extends Component {
         var newUser = UserService.login(this.state.userCred)
         this.setState({
             logedInUser:   newUser  })
-      
+            this.props.history.push('/')
     }
 
     render() {
@@ -46,8 +46,8 @@ export class LoginPage extends Component {
                         <label htmlFor="name-input">Enter Your Fullname</label>
                         <input ref={this.inputRef} required type="text" className="input-login" id="name-input" value={this.state.userCred.fullname} onChange={this.handleChange} name="fullname" />
                         <p>{this.state.errMsg}</p>
-                        <button className="save-login-page">save</button>
-                        <NavLink to={'/' + this.state.logedInUser._id} className="details-link">Log In  </NavLink>
+                        <button className="save-login-page">Log In</button>
+                        {/* <NavLink to={'/' + this.state.logedInUser._id} className="details-link">Log In  </NavLink> */}
                         {/* <NavLink to={'/contact/' + this.state.logedInUser._id} className="details-link">Log In  </NavLink> */}
 
                     </form>
