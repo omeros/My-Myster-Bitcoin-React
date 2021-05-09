@@ -8,7 +8,7 @@ import { ContactDetailsPage } from './pages/ContactDetailsPage'
 import { ContactEditPage } from './pages/ContactEditPage'
 import { HomePage } from './pages/HomePage'
 import { LoginPage } from './pages/LoginPage'
-
+// after folder moved
 
 
 
